@@ -8,9 +8,4 @@ public class Burger extends Sandwich {
     Burger(String filling){
         super(2, filling);
     }
-
-    @Override
-    public String toString(){
-        return super.toString();
-    }
 }
