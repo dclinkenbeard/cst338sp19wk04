@@ -1,12 +1,10 @@
 package inClass;
 
-import java.util.HashMap;
-
 public class Sandwich {
     private Integer slicesOfBread;
-    private HashMap<String, Integer> filling = new HashMap<>();
+    private String filling;
 
-    Sandwich(Integer slicesOfBread, HashMap<String, Integer> filling){
+    Sandwich(Integer slicesOfBread, String filling){
         this.slicesOfBread = slicesOfBread;
         this.filling = filling;
     }
@@ -14,19 +12,11 @@ public class Sandwich {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-
-        if(slicesOfBread > 1){
-            sb.append("bread\n");
-        }
-        for(String key : filling.keySet()){
-            for (int i = filling.get(key); i > 0; i--){
-                sb.append(key);
-                sb.append("\n");
-            }
-        }
-
-        sb.append("bread");
-
+        sb.append("This Sandwhich has ");
+        sb.append(filling);
+        sb.append(" between ");
+        sb.append(this.slicesOfBread);
+        sb.append(" slices of bread");
         return sb.toString();
     }
 }
